@@ -5,7 +5,7 @@ pipeline {
     stage ("Install dependencies") {
       steps {
         echo 'Installing NPM packages'
-        sh 'ls'
+        sh 'npm'
       }
     }
     stage ("build") {
