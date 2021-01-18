@@ -19,7 +19,7 @@ pipeline {
     stage ("deploy") {
       steps {
         echo 'deploying the application'
-        sh 'docker'
+        sh '/usr/local/bin/docker'
       }
     }
   }
