@@ -5,13 +5,13 @@ pipeline {
     stage ("Install dependencies") {
       steps {
         echo 'Installing NPM packages'
-        sh '/usr/local/bin/npm install'
+        sh '/usr/local/bin/npm/npm install'
       }
     }
     stage ("build") {
       steps {
         echo 'building the application'
-        sh '/usr/local/bin/npm run build'
+        sh '/usr/local/bin/npm/npm run build'
       }
     }
     stage ("deploy") {
