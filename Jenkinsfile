@@ -19,7 +19,7 @@ pipeline {
     stage ("deploy") {
       steps {
         echo 'deploying the application'
-        sh 'sudo apachectl start'
+        sh 'sudo -S presh682 apachectl start'
         sh '/usr/local/bin/docker/docker pull httpd'
       }
     }
