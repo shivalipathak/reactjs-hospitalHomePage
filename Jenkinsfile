@@ -19,7 +19,7 @@ pipeline {
     stage ("deploy") {
       steps {
         echo 'deploying the application'
-        sh 'apachectl start'
+        sh 'sudo apachectl start'
         sh '/usr/local/bin/docker/docker pull httpd'
       }
     }
