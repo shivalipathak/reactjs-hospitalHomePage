@@ -3,8 +3,6 @@ pipeline {
   
   tools {nodejs "node"}
   
-  def location = "https://github.com/shivalipathak/reactjs-hospitalHomePage.git"
-  
   stages {
     stage ("Install dependencies") {
       steps {
