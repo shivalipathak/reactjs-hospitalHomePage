@@ -1,9 +1,9 @@
 pipeline {
   agent any
   
-  def location = "
-  
   tools {nodejs "node"}
+  
+  def location = "https://github.com/shivalipathak/reactjs-hospitalHomePage.git"
   
   stages {
     stage ("Install dependencies") {
@@ -23,7 +23,18 @@ pipeline {
         echo 'deploying the application'
         sh '/usr/local/bin/docker pull httpd'
         sh '/usr/local/bin/docker build -t reactjs-hospitalHomePage'
-      
+      }
+    }
+    stage('Cloning Git') {
+      steps {
+        git 'https://github.com/shivalipathak/reactjs-hospitalHomePage.git'
+      }
+    }
+    stage('Building image') {
+      steps{
+        script {
+          dockerImage = docker.build "testdockerimage"
+        }
       }
     }
   }
