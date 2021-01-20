@@ -19,7 +19,7 @@ pipeline {
     stage ("deploy") {
       steps {
         echo 'deploying the application'
-        sh '/usr/local/bin/docker'
+        sh '/usr/local/bin/docker pull httpd'
       }
     }
   }
