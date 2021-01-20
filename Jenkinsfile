@@ -16,18 +16,6 @@ pipeline {
         sh 'npm run build'
       }
     }
-    stage('Cloning Git') {
-      steps {
-        git 'https://github.com/shivalipathak/reactjs-hospitalHomePage.git'
-      }
-    }
-    stage('Building image') {
-      steps{
-        script {
-          dockerImage = docker.build "testdockerimage"
-        }
-      }
-    }
     stage ("deploy") {
       steps {
         echo 'deploying the application'
