@@ -1,6 +1,8 @@
 pipeline {
   agent any
   
+  def location = "
+  
   tools {nodejs "node"}
   
   stages {
@@ -20,6 +22,8 @@ pipeline {
       steps {
         echo 'deploying the application'
         sh '/usr/local/bin/docker pull httpd'
+        sh '/usr/local/bin/docker build -t reactjs-hospitalHomePage'
+      
       }
     }
   }
