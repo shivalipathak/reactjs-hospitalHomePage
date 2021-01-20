@@ -20,7 +20,7 @@ pipeline {
       steps {
         echo 'deploying the application'
         sh '/usr/local/bin/docker pull httpd'
-        sh '/usr/local/bin/docker build -t reactjs-hospitalhomepage'
+        sh '/usr/local/bin/docker build -t reactjshospitalhomepage'
       }
     }
   }
